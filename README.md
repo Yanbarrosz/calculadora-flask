@@ -1,6 +1,6 @@
 # Calculadora Web (Python Flask HTML e JavaScript)
 
-**Autor: [PREENCHA AQUI SEU NOME COMPLETO]**
+**Autor: Yan Barros Pereira**
 
 Adaptado do projeto original de [VictorThomaz](https://github.com/VictorThomaz/projeto_calculadora_js_nav).
 
@@ -114,17 +114,16 @@ Para divisão por zero, a API responde HTTP 400 e a mensagem `Não é possível 
 
 ## Versionamento e publicação
 
-Esta cópia contém histórico Git local com commits separados para a base, multiplicação, divisão e documentação. Antes de publicar, substitua o nome do autor acima e adapte o nome da branch `seu_nome_completo` para seu nome real usando `git branch -m nome_sobrenome`.
+Esta cópia contém histórico Git local com commits separados para a base, multiplicação, divisão e documentação. O autor é **Yan Barros Pereira**, e a branch de desenvolvimento é `yan_barros_pereira`. Configure seu e-mail real do GitHub antes de novos commits ou da publicação.
 
 No GitHub, crie um repositório **público vazio** (sem inicializar README) e execute na pasta do projeto:
 
 ```bash
-git config user.name "SEU NOME COMPLETO"
+git config user.name "Yan Barros Pereira"
 git config user.email "SEU_EMAIL_DO_GITHUB"
-git branch -m seu_nome_sobrenome
 git remote add origin https://github.com/SEU_USUARIO/calculadora-flask.git
 git push -u origin main
-git push -u origin seu_nome_sobrenome
+git push -u origin yan_barros_pereira
 ```
 
 **Importante:** a branch `main` representa a versão original; a branch com seu nome contém todas as melhorias e deve ser selecionada como padrão no GitHub (Settings → Default branch), ou incorporada à `main` por merge.
