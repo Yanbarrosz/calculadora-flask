@@ -56,3 +56,7 @@ async function calcularOperacao(operacao) {
         saida.textContent = "Erro de comunicação com o servidor.";
     }
 }
+
+function calcularDivisao() {
+    calcularOperacao("divisao");
+}

@@ -55,5 +55,23 @@ def multiplicacao():
     except (KeyError, ValueError, TypeError):
         return jsonify({"erro": "Informe dois números válidos."}), 400
 
+# Página de divisão
+@app.route("/divisao")
+def divisao_page():
+    return render_template("divisao.html")
+
+@app.route("/api/divisao", methods=["POST"])
+def divisao():
+    try:
+        dados = request.get_json(silent=True) or {}
+        valor1 = float(dados["valor1"])
+        valor2 = float(dados["valor2"])
+        resultado = operacoes.calcular_divisao(valor1, valor2)
+        return jsonify({"resultado": resultado})
+    except ZeroDivisionError:
+        return jsonify({"erro": "Não é possível dividir por zero."}), 400
+    except (KeyError, ValueError, TypeError):
+        return jsonify({"erro": "Informe dois números válidos."}), 400
+
 if __name__ == "__main__":
     app.run(debug=True)
