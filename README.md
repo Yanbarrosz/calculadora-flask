@@ -1,6 +1,10 @@
 # Calculadora Web (Python Flask HTML e JavaScript)
 
-Este projeto é um exemplo didático de como usar **Python + Flask + HTML + JavaScript** para criar uma calculadora simples com páginas de **Soma** e **Subtração**.
+**Autor: [PREENCHA AQUI SEU NOME COMPLETO]**
+
+Adaptado do projeto original de [VictorThomaz](https://github.com/VictorThomaz/projeto_calculadora_js_nav).
+
+Este projeto é um exemplo didático de como usar **Python + Flask + HTML + JavaScript** para criar uma calculadora simples com páginas de **Soma**, **Subtração**, **Multiplicação** e **Divisão**.
 
 ---
 
@@ -24,7 +28,9 @@ projeto_calculadora_web/
 ├── templates/          # Páginas HTML
 │   ├── index.html
 │   ├── soma.html
-│   └── subtracao.html
+│   ├── subtracao.html
+│   ├── multiplicacao.html
+│   └── divisao.html
 └── static/             # Arquivos estáticos
 └── script.js
 ```
@@ -90,3 +96,37 @@ http://127.0.0.1:5000
 ```
 
 Para encerrar a aplicação, volte ao terminal e pressione `Ctrl+C`.
+
+## Funcionalidades
+
+- Navegação: Início, Soma, Subtração, Multiplicação e Divisão.
+- Operações implementadas no arquivo `operacoes.py` (Python).
+- Comunicação entre JavaScript e Flask via `fetch()` e endpoints JSON.
+- Divisão por zero tratada com mensagem amigável, sem interromper a aplicação.
+
+## Exemplos de API
+
+`POST /api/multiplicacao` com JSON `{"valor1": 6, "valor2": 7}` retorna `{"resultado": 42.0}`.
+
+`POST /api/divisao` com JSON `{"valor1": 10, "valor2": 2}` retorna `{"resultado": 5.0}`.
+
+Para divisão por zero, a API responde HTTP 400 e a mensagem `Não é possível dividir por zero.`
+
+## Versionamento e publicação
+
+Esta cópia contém histórico Git local com commits separados para a base, multiplicação, divisão e documentação. Antes de publicar, substitua o nome do autor acima e adapte o nome da branch `seu_nome_completo` para seu nome real usando `git branch -m nome_sobrenome`.
+
+No GitHub, crie um repositório **público vazio** (sem inicializar README) e execute na pasta do projeto:
+
+```bash
+git config user.name "SEU NOME COMPLETO"
+git config user.email "SEU_EMAIL_DO_GITHUB"
+git branch -m seu_nome_sobrenome
+git remote add origin https://github.com/SEU_USUARIO/calculadora-flask.git
+git push -u origin main
+git push -u origin seu_nome_sobrenome
+```
+
+**Importante:** a branch `main` representa a versão original; a branch com seu nome contém todas as melhorias e deve ser selecionada como padrão no GitHub (Settings → Default branch), ou incorporada à `main` por merge.
+
+Fontes para estudo: [Documentação Flask](https://flask.palletsprojects.com/en/stable/quickstart/), [Flask e JavaScript](https://flask.palletsprojects.com/en/stable/patterns/javascript/) e [Documentação GitHub](https://docs.github.com/en/get-started/using-git/about-git).
